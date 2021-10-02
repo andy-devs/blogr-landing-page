@@ -1,0 +1,37 @@
+// Colors
+$cta-text: hsl(356, 100%, 66%)
+$cta-hover: hsl(355, 100%, 74%)
+$headings: hsl(208, 49%, 24%)
+
+$text: hsl(0, 0%, 100%)
+$footer-text: hsl(240, 2%, 79%)
+$body-copy: hsl(207, 13%, 34%)
+$footer-background: hsl(240, 10%, 16%)
+
+$gradient-intro-first: hsl(13, 100%, 72%)
+$gradient-intro-second: hsl(353, 100%, 62%)
+
+$gradient-body-first: hsl(237, 17%, 21%)
+$gradient-body-second: hsl(237, 23%, 32%) 
+
+@mixin container($width)
+    margin: 0 auto
+    max-width: $width
+
+
+*
+    margin: 0
+    padding: 0
+body
+    height: 100vh
+    width: 100%
+    font-size: 16px
+.header
+    @include container($width: 1100px)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__main
+        display: flex
+        flex-direction: row
+        justify-content: space-between
