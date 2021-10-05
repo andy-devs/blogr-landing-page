@@ -21,6 +21,10 @@ body {
   background-size: cover;
 }
 
+.active {
+  display: block;
+}
+
 .header {
   color: white;
   font-family: 'Ubuntu';
@@ -87,10 +91,6 @@ body {
 .header__main__dropdown .dropdown-content a {
   color: inherit;
   padding: 5px 16px;
-  display: block;
-}
-
-.header__main__dropdown:hover .dropdown-content {
   display: block;
 }
 
