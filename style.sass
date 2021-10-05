@@ -18,20 +18,126 @@ $gradient-body-second: hsl(237, 23%, 32%)
     margin: 0 auto
     max-width: $width
 
-
 *
     margin: 0
     padding: 0
+a
+    text-decoration: none
+
 body
-    height: 100vh
-    width: 100%
+    min-height: 100vh
+    min-width: 100%
     font-size: 16px
+.intro
+    background: linear-gradient(90deg, $gradient-intro-first, $gradient-intro-second), 
+    url("./images/bg-pattern-intro.svg")
+    background-repeat: no-repeat, no-repeat
+    background-position: center
+    background-size: cover
 .header
+    color: $text
+    font-family: 'Ubuntu'
     @include container($width: 1100px)
     display: flex
     align-items: center
     justify-content: space-between
+    padding: 2rem 0;
     &__main
         display: flex
         flex-direction: row
         justify-content: space-between
+        &__logo
+            padding: 0 3rem 0 0
+        &__dropdown
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .dropbtn
+                font-size: 1rem
+                padding: 0 1rem
+                color: inherit
+                cursor: pointer
+                background: none
+                border: none
+            .dropdown-content
+                font-size: 0.8rem
+                display: none
+                position: absolute
+                min-width: 160px
+                z-index: 1
+                a 
+                    color: inherit
+                    padding: 5px 16px
+                    display: block
+            &:hover .dropdown-content 
+                display: block
+    &__auth
+        .login
+            color: inherit
+            margin-right: 1rem
+        .sign-up
+            font-weight: 500
+            color: $gradient-intro-second
+            padding: 0.7em 1.8em
+            background-color: white
+            border-radius: 25px
+            transition: all 0.2s ease-out
+            &:hover
+                color: white
+                background-color: $cta-hover
+.first-screen
+    padding-top: 3rem
+    @include container($width: 800px)
+    color: $text
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    &__head
+        padding-bottom: 0.4rem
+        font-family: 'Overpass'
+        font-size: 3.5rem
+        font-weight: 600
+    &__info
+        font-family: "Ubuntu"
+        font-weight: 400
+        color: $text
+        padding-bottom: 3rem
+    &__buttons
+        padding-bottom: 8rem
+        .start
+            margin-right: 1rem
+            font-family: "Ubuntu"
+            font-weight: 500
+            padding: 0.7em 0.9em
+            border-radius: 25px
+            color: $gradient-intro-second
+            background-color: white
+            transition: all 0.2s ease-out
+            &:hover
+                color: white
+                background-color: $cta-hover
+        .more
+            font-family: "Ubuntu"
+            font-weight: 500
+            padding: 0.7em 0.9em
+            border-radius: 25px
+            color: white
+            background-color: none
+            border: solid 1px white
+            transition: all 0.2s ease-out
+            &:hover
+                color: $cta-hover
+                background-color: white
+                border: solid 1px white
+
+        
+
+        
+        
+
+
+    
+
+         
+    
