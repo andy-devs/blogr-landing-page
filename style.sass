@@ -25,6 +25,7 @@ a
     text-decoration: none
 
 body
+    box-sizing: border-box
     min-height: 100vh
     min-width: 100%
     font-size: 16px
@@ -34,8 +35,6 @@ body
     background-repeat: no-repeat, no-repeat
     background-position: center
     background-size: cover
-.active
-    display: block
 .header
     color: $text
     font-family: 'Ubuntu'
@@ -43,7 +42,7 @@ body
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     &__main
         display: flex
         flex-direction: row
@@ -51,26 +50,52 @@ body
         &__logo
             padding: 0 3rem 0 0
         &__dropdown
+            position: relative
             display: flex
             align-items: center
             justify-content: space-between
+            .dropdown.active
+                .dropbtn
+                    text-decoration-line: underline
+                    text-decoration-color: white
+                    color: rgba(255, 255, 255, 1)
+                    img
+                        transform: rotate(180deg)
+                .dropbtn + .dropdown-content
+                    display: flex                
             .dropbtn
                 font-size: 1rem
-                padding: 0 1rem
-                color: inherit
+                margin: 0 1rem
+                color: rgba(255, 255, 255, 0.8)
                 cursor: pointer
                 background: none
                 border: none
+                transition: color 0.2s ease-out
+                &:hover
+                    color: rgba(255, 255, 255, 1)
+                img
+                    transition: transform 0.23s ease-out
+                    
             .dropdown-content
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: space-around
+                padding: 1rem 0
                 font-size: 0.8rem
-                display: none
                 position: absolute
-                min-width: 160px
+                top: calc(100% + 0.25rem)
+                background-color: white
+                border-radius: 0.25rem
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1)
+                display: none
                 z-index: 1
                 a 
-                    color: inherit
-                    padding: 5px 16px
-                    display: block
+                    color: rgba(0, 0, 0, .7)
+                    padding: 7px 20px
+                    transition: color 0.1s ease-in
+                    &:hover
+                        color: rgba(0, 0, 0, 1)
             
     &__auth
         .login
@@ -86,7 +111,12 @@ body
             &:hover
                 color: white
                 background-color: $cta-hover
+.first_content
+    left: -0.5rem
+.second_content
+    left: 7.3rem
 .first-screen
+    text-align: center
     padding-top: 3rem
     @include container($width: 800px)
     color: $text
