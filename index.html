@@ -24,52 +24,76 @@
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 	</head>
 	<body>
-		<header class="header">
-			<div class="header__main">
-				<div class="header__main__logo">Blogr</div>
-				<div class="header__main__dropdown">
-					<button class="dropbtn">Product</button>
-					<div class="dropdown-content">
-						<a href="">Overview</a>
-						<a href="">Pricing</a>
-						<a href="">Marketplace</a>
-						<a href="">Features</a>
-						<a href="">Integrations</a>
+		<div class="intro">
+			<header class="header">
+				<div class="header__main">
+					<div class="header__main__logo">
+						<img src="./images/logo.svg" alt="" />
+					</div>
+					<div class="header__main__dropdown">
+						<div class="dropdown" data-dropdown>
+							<button class="dropbtn" data-dropdown-button>
+								Product
+								<img
+									src="./images/icon-arrow-light.svg"
+									alt=""
+								/>
+							</button>
+							<div class="dropdown-content first_content">
+								<a href="">Overview</a>
+								<a href="">Pricing</a>
+								<a href="">Marketplace</a>
+								<a href="">Features</a>
+								<a href="">Integrations</a>
+							</div>
+						</div>
+						<div class="dropdown" data-dropdown>
+							<button class="dropbtn" data-dropdown-button>
+								Company
+								<img
+									src="./images/icon-arrow-light.svg"
+									alt=""
+								/>
+							</button>
+							<div class="dropdown-content second_content">
+								<a href="">About</a>
+								<a href="">Team</a>
+								<a href="">Blog</a>
+								<a href="">Careers</a>
+							</div>
+						</div>
+						<div class="dropdown" data-dropdown>
+							<button class="dropbtn" data-dropdown-button>
+								Connect
+								<img
+									src="./images/icon-arrow-light.svg"
+									alt=""
+								/>
+							</button>
+							<div class="dropdown-content">
+								<a href="">Contact</a>
+								<a href="">Newsletter</a>
+								<a href="">LinkedIn</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="dropdown">
-					<button class="dropbtn">Company</button>
-					<div class="dropdown-content">
-						<a href="">About</a>
-						<a href="">Team</a>
-						<a href="">Blog</a>
-						<a href="">Careers</a>
-					</div>
+				<div class="header__auth">
+					<a href="" class="login"> Login </a>
+					<a href="" class="sign-up"> Sign Up </a>
 				</div>
-				<div class="dropdown">
-					<button class="dropbtn">Connect</button>
-					<div class="dropdown-content">
-						<a href="">Contact</a>
-						<a href="">Newsletter</a>
-						<a href="">LinkedIn</a>
-					</div>
+			</header>
+			<section class="first-screen">
+				<h1 class="first-screen__head">A modern publishing platform</h1>
+				<p class="first-screen__info">
+					Grow your audience and build your online brand
+				</p>
+				<div class="first-screen__buttons">
+					<a href="" class="start"> Start for Free </a>
+					<a href="" class="more"> Learn More </a>
 				</div>
-			</div>
-			<div class="header__auth">
-				<a href="" class="login"> Login </a>
-				<a href="" class="sign-up"> Sign Up </a>
-			</div>
-		</header>
-		<section class="first-screen">
-			<h1 class="first-screen__head">A modern publishing platform</h1>
-			<p class="first-screen__info">
-				Grow your audience and build your online brand
-			</p>
-			<div class="first-screen__buttons">
-				<a href="" class="first-screen__start"> Start for Free </a>
-				<a href="" class="first-screen__more"> Learn More </a>
-			</div>
-		</section>
+			</section>
+		</div>
 		<section class="info">
 			<h2 class="info__head">Designed for the future</h2>
 			<div class="info__content">
@@ -155,5 +179,6 @@
 				</ul>
 			</div>
 		</footer>
+		<script src="./app.js"></script>
 	</body>
 </html>

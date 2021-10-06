@@ -3,13 +3,29 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  height: 100vh;
-  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100%;
   font-size: 16px;
 }
 
+.intro {
+  background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54)), url("./images/bg-pattern-intro.svg");
+  background: linear-gradient(90deg, #ff8f70, #ff3d54), url("./images/bg-pattern-intro.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .header {
+  color: white;
+  font-family: 'Ubuntu';
   margin: 0 auto;
   max-width: 1100px;
   display: -webkit-box;
@@ -21,6 +37,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 2rem 1rem;
 }
 
 .header__main {
@@ -34,5 +51,200 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header__main__logo {
+  padding: 0 3rem 0 0;
+}
+
+.header__main__dropdown {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__main__dropdown .dropdown.active .dropbtn {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+  color: white;
+}
+
+.header__main__dropdown .dropdown.active .dropbtn img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header__main__dropdown .dropdown.active .dropbtn + .dropdown-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__main__dropdown .dropbtn {
+  font-size: 1rem;
+  margin: 0 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  background: none;
+  border: none;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.header__main__dropdown .dropbtn:hover {
+  color: white;
+}
+
+.header__main__dropdown .dropbtn img {
+  -webkit-transition: -webkit-transform 0.23s ease-out;
+  transition: -webkit-transform 0.23s ease-out;
+  transition: transform 0.23s ease-out;
+  transition: transform 0.23s ease-out, -webkit-transform 0.23s ease-out;
+}
+
+.header__main__dropdown .dropdown-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1;
+}
+
+.header__main__dropdown .dropdown-content a {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 7px 20px;
+  -webkit-transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in;
+}
+
+.header__main__dropdown .dropdown-content a:hover {
+  color: black;
+}
+
+.header__auth .login {
+  color: inherit;
+  margin-right: 1rem;
+}
+
+.header__auth .sign-up {
+  font-weight: 500;
+  color: #ff3d54;
+  padding: 0.7em 1.8em;
+  background-color: white;
+  border-radius: 25px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.header__auth .sign-up:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
+.first_content {
+  left: -0.5rem;
+}
+
+.second_content {
+  left: 7.3rem;
+}
+
+.first-screen {
+  text-align: center;
+  padding-top: 3rem;
+  margin: 0 auto;
+  max-width: 800px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.first-screen__head {
+  padding-bottom: 0.4rem;
+  font-family: 'Overpass';
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.first-screen__info {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  color: white;
+  padding-bottom: 3rem;
+}
+
+.first-screen__buttons {
+  padding-bottom: 8rem;
+}
+
+.first-screen__buttons .start {
+  margin-right: 1rem;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  padding: 0.7em 0.9em;
+  border-radius: 25px;
+  color: #ff3d54;
+  background-color: white;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.first-screen__buttons .start:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
+.first-screen__buttons .more {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  padding: 0.7em 0.9em;
+  border-radius: 25px;
+  color: white;
+  background-color: none;
+  border: solid 1px white;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.first-screen__buttons .more:hover {
+  color: #ff7a85;
+  background-color: white;
+  border: solid 1px white;
 }
 /*# sourceMappingURL=style.css.map */
