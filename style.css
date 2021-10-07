@@ -406,7 +406,6 @@ body {
 }
 
 .chars__content {
-  margin-left: -15rem;
   width: 100%;
   padding-top: 3rem;
 }
@@ -425,6 +424,7 @@ body {
 }
 
 .chars__wrapper {
+  margin-right: -18rem;
   top: 0rem;
   left: -17.5rem;
   position: relative;
