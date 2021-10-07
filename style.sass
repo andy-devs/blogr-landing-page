@@ -2,7 +2,7 @@
 $cta-text: hsl(356, 100%, 66%)
 $cta-hover: hsl(355, 100%, 74%)
 $headings: hsl(208, 49%, 24%)
-$opacity-text: rgba(0,0,0,.7)
+$opacity-text: rgba(31,63,91,.8)
 
 $text: hsl(0, 0%, 100%)
 $footer-text: hsl(240, 2%, 79%)
@@ -226,7 +226,6 @@ body
     background-repeat: no-repeat, no-repeat
     background-position: -220px -440px, center
     background-size: 60rem, cover
-    background-overflow: hidden
     border-bottom-left-radius: 8rem
     border-top-right-radius: 8rem
     &__image
@@ -248,7 +247,34 @@ body
             width: 70%
             line-height: 2rem
 
-
+.chars
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    padding: 6rem 0 0 0
+    &__content
+        margin-left: -15rem
+        width: 100%
+        padding-top: 3rem
+        h3
+            color: $headings
+            font-size: 1.8rem
+            padding-bottom: 1rem
+        p
+            width: 85%
+            line-height: 1.8rem
+            padding-bottom: 4rem
+            color: $opacity-text
+    &__wrapper
+        top: 0rem
+        left: -17.5rem
+        position: relative
+        
+    &__image
+        max-width: 100rem
+        height: auto
+            
 
 
         
