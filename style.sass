@@ -35,7 +35,6 @@ a
 body
     box-sizing: border-box
     min-height: 100vh
-    min-width: 100%
     font-size: 16px
 .intro
     background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(90deg, $gradient-intro-first, $gradient-intro-second);
@@ -140,6 +139,7 @@ body
     align-items: center
     justify-content: space-around
     &__head
+        color: white
         padding-bottom: 0.4rem
         font-family: 'Overpass'
         font-size: 3.5rem
@@ -178,37 +178,78 @@ body
                 border: solid 1px white
 
 .info
-    @include container($width: 1100px)
+    overflow: hidden
     display: flex
     flex-direction: column
     align-items: center
-    padding: 8rem 0 4rem 0
+    justify-content: center
+    padding: 8rem 0 0 0
     &__head
         color: $headings
         font-size: 2rem
         padding-bottom: 2.5rem
     &__content
+        padding-left: 3rem
+        margin-left: 4rem
         display: flex
         flex-direction: row
         align-items: flex-start
-        &__image
-            padding-left: 5rem
+        justify-content: space-between
+        &__wrapper
+            top: -11rem
             position: relative
-            margin-top: -12rem
-            margin-right: -26rem
-            img
-                min-width: 100%
-                height: auto
+            overflow: hidden
+        &__image
+            max-width: 57rem
+            height: auto
         &__text
+            width: 75%
             padding-top: 3rem
             h3
                 font-size: 1.8rem
                 padding-bottom: 1rem
             p
+                width: 90%
                 line-height: 1.8rem
                 padding-bottom: 6rem
                 color: $opacity-text
-        
+
+.safety
+    margin-top: -5rem
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    color: $text
+    min-width: 100%
+    background-image: url("./images/bg-pattern-circles.svg"), linear-gradient(90deg, $gradient-body-first, $gradient-body-second);
+    background-repeat: no-repeat, no-repeat
+    background-position: -220px -440px, center
+    background-size: 60rem, cover
+    background-overflow: hidden
+    border-bottom-left-radius: 8rem
+    border-top-right-radius: 8rem
+    &__image
+        margin-bottom: -10rem
+        .safety__phones
+            position: relative
+            top: -3.5rem
+            padding-left: 5rem
+    &__text
+        padding-left: 4rem
+        h2
+            color: white
+            font-size: 2.8rem
+            padding-bottom: 1rem
+        p
+            font-size: 1rem
+            text-align: left
+            color: rgba(255,255,255, 0.7)
+            width: 70%
+            line-height: 2rem
+
+
+
 
         
         
