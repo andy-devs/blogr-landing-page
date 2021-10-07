@@ -2,6 +2,7 @@
 $cta-text: hsl(356, 100%, 66%)
 $cta-hover: hsl(355, 100%, 74%)
 $headings: hsl(208, 49%, 24%)
+$opacity-text: rgba(31,63,91,.8)
 
 $text: hsl(0, 0%, 100%)
 $footer-text: hsl(240, 2%, 79%)
@@ -21,20 +22,26 @@ $gradient-body-second: hsl(237, 23%, 32%)
 *
     margin: 0
     padding: 0
+h1,h2,h3,h4 
+    font-family: 'Overpass'
+    font-weight: 600
+    color: $headings
+p
+    font-family: "Ubuntu"
+    font-weight: 400
 a
     text-decoration: none
 
 body
     box-sizing: border-box
     min-height: 100vh
-    min-width: 100%
     font-size: 16px
 .intro
-    background: linear-gradient(90deg, $gradient-intro-first, $gradient-intro-second), 
-    url("./images/bg-pattern-intro.svg")
+    background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(90deg, $gradient-intro-first, $gradient-intro-second);
     background-repeat: no-repeat, no-repeat
-    background-position: center
-    background-size: cover
+    background-position: -345px -1280px, center
+    background-size: 185rem, cover
+    border-bottom-left-radius: 6rem
 .header
     color: $text
     font-family: 'Ubuntu'
@@ -42,7 +49,7 @@ body
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem 2rem 1rem;
     &__main
         display: flex
         flex-direction: row
@@ -100,7 +107,11 @@ body
     &__auth
         .login
             color: inherit
-            margin-right: 1rem
+            margin-right: 2rem
+            color: rgba(255, 255, 255, 0.8)
+            transition: color 0.2s ease-out
+            &:hover
+                color: rgba(255, 255, 255, 1)
         .sign-up
             font-weight: 500
             color: $gradient-intro-second
@@ -111,13 +122,16 @@ body
             &:hover
                 color: white
                 background-color: $cta-hover
+// Don't question it...
 .first_content
     left: -0.5rem
 .second_content
-    left: 7.3rem
+    left: 7.1rem
+
 .first-screen
     text-align: center
-    padding-top: 3rem
+    padding-top: 7rem
+    padding-bottom: 9rem
     @include container($width: 800px)
     color: $text
     display: flex
@@ -125,17 +139,18 @@ body
     align-items: center
     justify-content: space-around
     &__head
+        color: white
         padding-bottom: 0.4rem
         font-family: 'Overpass'
         font-size: 3.5rem
         font-weight: 600
+        padding-bottom: 0.5rem
     &__info
         font-family: "Ubuntu"
         font-weight: 400
         color: $text
-        padding-bottom: 3rem
+        padding-bottom: 3.3rem
     &__buttons
-        padding-bottom: 8rem
         .start
             margin-right: 1rem
             font-family: "Ubuntu"
@@ -156,13 +171,111 @@ body
             color: white
             background-color: none
             border: solid 1px white
-            transition: all 0.2s ease-out
+            transition:  0.2s ease-out
             &:hover
                 color: $cta-hover
                 background-color: white
                 border: solid 1px white
 
+.info
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 8rem 0 0 0
+    &__head
+        color: $headings
+        font-size: 2rem
+        padding-bottom: 2.5rem
+    &__content
+        padding-left: 3rem
+        margin-left: 4rem
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: space-between
+        &__wrapper
+            top: -11rem
+            position: relative
+            overflow: hidden
+        &__image
+            max-width: 57rem
+            height: auto
+        &__text
+            width: 75%
+            padding-top: 3rem
+            h3
+                font-size: 1.8rem
+                padding-bottom: 1rem
+            p
+                width: 90%
+                line-height: 1.8rem
+                padding-bottom: 6rem
+                color: $opacity-text
+
+.safety
+    margin-top: -5rem
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    color: $text
+    min-width: 100%
+    background-image: url("./images/bg-pattern-circles.svg"), linear-gradient(90deg, $gradient-body-first, $gradient-body-second);
+    background-repeat: no-repeat, no-repeat
+    background-position: -220px -440px, center
+    background-size: 60rem, cover
+    border-bottom-left-radius: 8rem
+    border-top-right-radius: 8rem
+    &__image
+        margin-bottom: -10rem
+        .safety__phones
+            position: relative
+            top: -3.5rem
+            padding-left: 5rem
+    &__text
+        padding-left: 4rem
+        h2
+            color: white
+            font-size: 2.8rem
+            padding-bottom: 1rem
+        p
+            font-size: 1rem
+            text-align: left
+            color: rgba(255,255,255, 0.7)
+            width: 70%
+            line-height: 2rem
+
+.chars
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    padding: 6rem 0 0 0
+    &__content
+        margin-left: -15rem
+        width: 100%
+        padding-top: 3rem
+        h3
+            color: $headings
+            font-size: 1.8rem
+            padding-bottom: 1rem
+        p
+            width: 85%
+            line-height: 1.8rem
+            padding-bottom: 4rem
+            color: $opacity-text
+    &__wrapper
+        top: 0rem
+        left: -17.5rem
+        position: relative
         
+    &__image
+        max-width: 100rem
+        height: auto
+            
+
 
         
         

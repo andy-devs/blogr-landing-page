@@ -3,6 +3,17 @@
   padding: 0;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Overpass';
+  font-weight: 600;
+  color: #1f3f5b;
+}
+
+p {
+  font-family: "Ubuntu";
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
 }
@@ -11,16 +22,16 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-height: 100vh;
-  min-width: 100%;
   font-size: 16px;
 }
 
 .intro {
-  background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54)), url("./images/bg-pattern-intro.svg");
-  background: linear-gradient(90deg, #ff8f70, #ff3d54), url("./images/bg-pattern-intro.svg");
+  background-image: url("./images/bg-pattern-intro.svg"), -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(90deg, #ff8f70, #ff3d54);
   background-repeat: no-repeat, no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: -345px -1280px, center;
+  background-size: 185rem, cover;
+  border-bottom-left-radius: 6rem;
 }
 
 .header {
@@ -37,7 +48,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem 2rem 1rem;
 }
 
 .header__main {
@@ -149,7 +160,14 @@ body {
 
 .header__auth .login {
   color: inherit;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.header__auth .login:hover {
+  color: white;
 }
 
 .header__auth .sign-up {
@@ -172,12 +190,13 @@ body {
 }
 
 .second_content {
-  left: 7.3rem;
+  left: 7.1rem;
 }
 
 .first-screen {
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 9rem;
   margin: 0 auto;
   max-width: 800px;
   color: white;
@@ -196,21 +215,19 @@ body {
 }
 
 .first-screen__head {
+  color: white;
   padding-bottom: 0.4rem;
   font-family: 'Overpass';
   font-size: 3.5rem;
   font-weight: 600;
+  padding-bottom: 0.5rem;
 }
 
 .first-screen__info {
   font-family: "Ubuntu";
   font-weight: 400;
   color: white;
-  padding-bottom: 3rem;
-}
-
-.first-screen__buttons {
-  padding-bottom: 8rem;
+  padding-bottom: 3.3rem;
 }
 
 .first-screen__buttons .start {
@@ -238,13 +255,183 @@ body {
   color: white;
   background-color: none;
   border: solid 1px white;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .first-screen__buttons .more:hover {
   color: #ff7a85;
   background-color: white;
   border: solid 1px white;
+}
+
+.info {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8rem 0 0 0;
+}
+
+.info__head {
+  color: #1f3f5b;
+  font-size: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.info__content {
+  padding-left: 3rem;
+  margin-left: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info__content__wrapper {
+  top: -11rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.info__content__image {
+  max-width: 57rem;
+  height: auto;
+}
+
+.info__content__text {
+  width: 75%;
+  padding-top: 3rem;
+}
+
+.info__content__text h3 {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.info__content__text p {
+  width: 90%;
+  line-height: 1.8rem;
+  padding-bottom: 6rem;
+  color: rgba(31, 63, 91, 0.8);
+}
+
+.safety {
+  margin-top: -5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  min-width: 100%;
+  background-image: url("./images/bg-pattern-circles.svg"), -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
+  background-image: url("./images/bg-pattern-circles.svg"), linear-gradient(90deg, #2c2d3f, #3f4164);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -220px -440px, center;
+  background-size: 60rem, cover;
+  border-bottom-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+}
+
+.safety__image {
+  margin-bottom: -10rem;
+}
+
+.safety__image .safety__phones {
+  position: relative;
+  top: -3.5rem;
+  padding-left: 5rem;
+}
+
+.safety__text {
+  padding-left: 4rem;
+}
+
+.safety__text h2 {
+  color: white;
+  font-size: 2.8rem;
+  padding-bottom: 1rem;
+}
+
+.safety__text p {
+  font-size: 1rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+  width: 70%;
+  line-height: 2rem;
+}
+
+.chars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6rem 0 0 0;
+}
+
+.chars__content {
+  margin-left: -15rem;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.chars__content h3 {
+  color: #1f3f5b;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.chars__content p {
+  width: 85%;
+  line-height: 1.8rem;
+  padding-bottom: 4rem;
+  color: rgba(31, 63, 91, 0.8);
+}
+
+.chars__wrapper {
+  top: 0rem;
+  left: -17.5rem;
+  position: relative;
+}
+
+.chars__image {
+  max-width: 100rem;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
