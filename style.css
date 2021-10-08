@@ -434,4 +434,45 @@ body {
   max-width: 100rem;
   height: auto;
 }
+
+.footer {
+  background-color: #25252d;
+  color: #c8c8cb;
+  padding: 4rem 0;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.footer__column p {
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.footer__column ul {
+  list-style: none;
+}
+
+.footer__column li {
+  padding-bottom: 0.8rem;
+}
+
+.footer__column a {
+  color: #c8c8cb;
+}
+
+.footer__column a:hover {
+  -webkit-text-decoration: underline 2px white;
+          text-decoration: underline 2px white;
+}
 /*# sourceMappingURL=style.css.map */

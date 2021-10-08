@@ -273,8 +273,31 @@ body
     &__image
         max-width: 100rem
         height: auto
-            
+        
+.footer
+    background-color: $footer-background
+    color: $footer-text
+    padding: 4rem 0
+    &__content
+        display: flex
+        align-items: flex-start
+        justify-content: space-around
+        @include container($width: 1200px)
+    &__column
+        p
+            color: white
+            padding-bottom: 2rem
+        ul
+            list-style: none
+        li
+            padding-bottom: 0.8rem
+        a
+            color: $footer-text
+        a:hover
+            text-decoration: underline 2px white
+        
 
+    
 
         
         
