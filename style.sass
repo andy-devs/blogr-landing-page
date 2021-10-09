@@ -53,6 +53,9 @@ body
     background-position: -345px -1280px, center
     background-size: 185rem, cover
     border-bottom-left-radius: 6rem
+.navbar-toggler
+    position: relative
+    left: -1rem
 .header
     background: linear-gradient(90deg, $header-first 0%, $header-second 100%)
     z-index: 999
@@ -61,67 +64,30 @@ body
     color: $text
     font-family: 'Ubuntu'
     width: 100vw
-    display: flex
-    align-items: center
-    justify-content: space-between
-    padding: 1.8rem 1rem 1.5rem 1rem;
+    padding: 1.8rem 0rem 1.5rem 6rem;
+    &__logo
+        padding-right: 2rem
     &__main
-        margin-left: 15rem
         display: flex
         flex-direction: row
-        justify-content: space-between
-        &__logo
-            padding: 0 3rem 0 0
-        &__dropdown
-            position: relative
-            display: flex
-            align-items: center
-            justify-content: space-between
-            .dropdown.active
-                .dropbtn
-                    text-decoration-line: underline
-                    text-decoration-color: white
-                    color: rgba(255, 255, 255, 1)
-                    img
-                        transform: rotate(180deg)
-                .dropbtn + .dropdown-content
-                    display: flex                
-            .dropbtn
-                font-size: 1rem
-                margin: 0 1rem
-                color: rgba(255, 255, 255, 0.8)
-                cursor: pointer
-                background: none
-                border: none
-                transition: color 0.2s ease-out
-                &:hover
-                    color: rgba(255, 255, 255, 1)
-                img
-                    transition: transform 0.23s ease-out
-                    
-            .dropdown-content
-                display: flex
-                flex-direction: column
-                align-items: flex-start
-                justify-content: space-around
-                padding: 1rem 0
-                font-size: 0.8rem
-                position: absolute
-                top: calc(100% + 0.25rem)
-                background-color: white
-                border-radius: 0.25rem
-                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1)
-                display: none
-                z-index: 1
-                a 
-                    color: rgba(0, 0, 0, .7)
-                    padding: 7px 20px
-                    transition: color 0.1s ease-in
-                    &:hover
-                        color: rgba(0, 0, 0, 1)
-            
+        align-items: center       
+        .dropbtn
+            font-size: 1rem
+            margin: 0
+            padding: 0 1rem
+            color: rgba(255, 255, 255, 0.8)
+            cursor: pointer
+            background: none
+            border: none
+            transition: color 0.2s ease-out
+            &:hover
+                color: white
+            img
+                transition: transform 0.23s ease-out  
+        .dropdown-content
+            border-radius: 0.25rem
     &__auth
-        margin-right: 10rem
+        margin-right: 5rem
         .login
             color: inherit
             margin-right: 2rem
@@ -132,19 +98,13 @@ body
         .sign-up
             font-weight: 500
             color: $gradient-intro-second
-            padding: 0.7em 1.8em
+            padding: 0.7em 1.5em
             background-color: white
             border-radius: 25px
             transition: all 0.2s ease-out
             &:hover
                 color: white
                 background-color: $cta-hover
-// Don't question it...
-.first_content
-    left: -0.5rem
-.second_content
-    left: 7.1rem
-
 .first-screen
     text-align: center
     padding-top: 14rem
@@ -303,11 +263,15 @@ body
         @include container($width: 1200px)
     &__column
         p
+            text-align: left
             color: white
             padding-bottom: 2rem
         ul
+            padding-left: 0
+
             list-style: none
         li
+            text-align: left
             padding-bottom: 0.8rem
         a
             color: $footer-text
@@ -315,10 +279,13 @@ body
             text-decoration: underline 2px white
 @media (max-width: 1070px)
     .header
+        padding-left: 2rem
         &__main
-            margin-left: 6rem
+            margin-left: 0rem
+            padding-left: 0rem
         &__auth
-            margin-right: 6rem
+            padding-right: 0rem
+            margin-right: 2rem
     .safety
         &__image
             .safety__phones
@@ -352,12 +319,14 @@ body
     .chars__wrapper
         img
             max-width: 46rem
-@media (max-width: 860px)
+@media (max-width: 890px)
     .header
         &__main
-            margin-left: 2rem
+            margin-left: 0rem
         &__auth
-            margin-right: 2rem
+            margin-right: 1rem
+            .login
+                margin-right: 0.5rem
 @media (max-width: 810px)
     .header
         &__main
@@ -400,13 +369,49 @@ body
     .chars__wrapper
         img
             max-width: 38rem
+
+
+@media (max-width: 765px)
+    .dropdown-menu
+        margin-top: 20px
+        background-color: lightgrey
+    .dropdown .dropbtn
+        padding: 0
+        margin: 0
+        min-width: 100%
+    .header
+        justify-content: space-around
+        .dropdown-content
+            padding-top: 1rem
+            margin-top: 1rem
+            background-color: white
+            text-align: center
+            margin-right: 2rem
+    .dropdown-menu
+        text-align: center
+    .dropdown
+        text-align: center
+        padding: 8px 10px
+    .header__main .dropbtn
+        color: black
+        &:hover
+            color: black
+    .header__auth
+        padding-left: 1rem
+        margin-right: 0
+        padding-bottom: 2rem
+    .header__auth .login
+        color: black
+        &:hover
+            color: black
+    .header__auth .sign-up
+        color: white
+        background-color: $cta-hover
 @media (max-width: 690px)
+
     .info h2
         padding-bottom: 0rem
-    .header 
-        padding-right: 0.4rem
-        .login
-            margin-right: 0.5rem
+
     .info
         &__content
             padding-left: 6rem
@@ -455,12 +460,6 @@ body
         left: 10rem
 
 // Mobile Design
-@media (max-width: 670px)
-    .header
-        &__main
-            margin-left: 1rem
-        &__auth
-            margin-right: 1rem
 @media (max-width: 570px)
     .first-screen
         padding-top: 10rem
@@ -554,6 +553,8 @@ body
             display: none
         &__image__mobile
             display: block
+            height: auto
+            width: 28rem
 @media (max-width: 500px)
     .footer
         &__content
@@ -564,13 +565,16 @@ body
         &__logo
             padding-bottom: 3rem
         &__column
-            text-align: center
+            padding-bottom: 2rem
+
             p
                 color: white
-                padding-bottom: 1.8rem
+                text-align: center
+                padding-bottom: 0rem
             ul
                 list-style: none
             li
+                text-align: center
                 padding-bottom: 0.6rem
         
 
