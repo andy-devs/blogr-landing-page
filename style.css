@@ -11,6 +11,11 @@
   display: none;
 }
 
+.dropdown-item:focus {
+  color: black;
+  background-color: #e6e6e6c7;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Overpass';
   font-weight: 600;
@@ -843,6 +848,13 @@ body {
 }
 
 @media (max-width: 500px) {
+  .info h2 {
+    text-align: center;
+  }
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   .info__content__text h3 {
     text-align: center;
     font-size: 1.8rem;
@@ -892,15 +904,24 @@ body {
 }
 
 @media (max-width: 450px) {
+  .info img {
+    max-width: 20rem;
+  }
+  .info__content__text p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   .info__content__text h3 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-bottom: 1rem;
   }
   .info__content__text p {
     font-size: 0.75rem;
   }
   .chars__content p {
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 0.75rem;
   }
 }
