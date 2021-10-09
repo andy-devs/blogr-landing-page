@@ -33,6 +33,16 @@ body {
   font-size: 16px;
 }
 
+.navbar-toggler-icon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.navbar-light .navbar-toggler {
+  color: white;
+  border-color: transparent;
+}
+
 .intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -557,7 +567,7 @@ body {
 @media (max-width: 765px) {
   .dropdown-menu {
     margin-top: 20px;
-    background-color: lightgrey;
+    background-color: #e6e6e6c7;
   }
   .dropdown .dropbtn {
     padding: 0;
