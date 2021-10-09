@@ -12,6 +12,10 @@ $footer-background: hsl(240, 10%, 16%)
 $gradient-intro-first: hsl(13, 100%, 72%)
 $gradient-intro-second: hsl(353, 100%, 62%)
 
+$header-first: rgba(255, 143, 112, 0.7)
+$header-second: rgba(255, 61, 84, 0.7)
+
+
 $gradient-body-first: hsl(237, 17%, 21%)
 $gradient-body-second: hsl(237, 23%, 32%) 
 
@@ -37,20 +41,28 @@ body
     min-height: 100vh
     font-size: 16px
 .intro
+    display: flex
+    flex-direction: column
+    align-items: center
     background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(90deg, $gradient-intro-first, $gradient-intro-second);
     background-repeat: no-repeat, no-repeat
     background-position: -345px -1280px, center
     background-size: 185rem, cover
     border-bottom-left-radius: 6rem
 .header
+    background: linear-gradient(90deg, $header-first 0%, $header-second 100%)
+    z-index: 999
+    align-self: center
+    position: fixed
     color: $text
     font-family: 'Ubuntu'
-    @include container($width: 1100px)
+    width: 100vw
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 2.5rem 1rem 2rem 1rem;
+    padding: 1.8rem 1rem 1.5rem 1rem;
     &__main
+        margin-left: 15rem
         display: flex
         flex-direction: row
         justify-content: space-between
@@ -105,6 +117,7 @@ body
                         color: rgba(0, 0, 0, 1)
             
     &__auth
+        margin-right: 10rem
         .login
             color: inherit
             margin-right: 2rem
@@ -130,7 +143,7 @@ body
 
 .first-screen
     text-align: center
-    padding-top: 7rem
+    padding-top: 14rem
     padding-bottom: 9rem
     @include container($width: 800px)
     color: $text
@@ -297,6 +310,11 @@ body
         a:hover
             text-decoration: underline 2px white
 @media (max-width: 1070px)
+    .header
+        &__main
+            margin-left: 6rem
+        &__auth
+            margin-right: 6rem
     .safety
         &__image
             .safety__phones
@@ -330,6 +348,12 @@ body
     .chars__wrapper
         img
             max-width: 46rem
+@media (max-width: 860px)
+    .header
+        &__main
+            margin-left: 2rem
+        &__auth
+            margin-right: 2rem
 @media (max-width: 810px)
     .header
         &__main
@@ -427,6 +451,15 @@ body
         left: 10rem
 
 // Mobile Design
+@media (max-width: 670px)
+    .header
+        &__main
+            margin-left: 1rem
+        &__auth
+            margin-right: 1rem
+@media (max-width: 560px)
+    .header__main__dropdown
+
 
         
 
