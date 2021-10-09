@@ -26,6 +26,16 @@ body {
 }
 
 .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url("./images/bg-pattern-intro.svg"), -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
   background-image: url("./images/bg-pattern-intro.svg"), linear-gradient(90deg, #ff8f70, #ff3d54);
   background-repeat: no-repeat, no-repeat;
@@ -35,10 +45,15 @@ body {
 }
 
 .header {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 143, 112, 0.7)), to(rgba(255, 61, 84, 0.7)));
+  background: linear-gradient(90deg, rgba(255, 143, 112, 0.7) 0%, rgba(255, 61, 84, 0.7) 100%);
+  z-index: 999;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: fixed;
   color: white;
   font-family: 'Ubuntu';
-  margin: 0 auto;
-  max-width: 1100px;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,10 +63,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2.5rem 1rem 2rem 1rem;
+  padding: 1.8rem 1rem 1.5rem 1rem;
 }
 
 .header__main {
+  margin-left: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,6 +174,10 @@ body {
   color: black;
 }
 
+.header__auth {
+  margin-right: 10rem;
+}
+
 .header__auth .login {
   color: inherit;
   margin-right: 2rem;
@@ -195,7 +215,7 @@ body {
 
 .first-screen {
   text-align: center;
-  padding-top: 7rem;
+  padding-top: 14rem;
   padding-bottom: 9rem;
   margin: 0 auto;
   max-width: 800px;
@@ -478,6 +498,12 @@ body {
 }
 
 @media (max-width: 1070px) {
+  .header__main {
+    margin-left: 6rem;
+  }
+  .header__auth {
+    margin-right: 6rem;
+  }
   .safety__image .safety__phones {
     padding-left: 3rem;
     max-width: 32rem;
@@ -519,6 +545,15 @@ body {
   }
   .chars__wrapper img {
     max-width: 46rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .header__main {
+    margin-left: 2rem;
+  }
+  .header__auth {
+    margin-right: 2rem;
   }
 }
 
@@ -642,6 +677,15 @@ body {
   }
   .third_content {
     left: 10rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .header__main {
+    margin-left: 1rem;
+  }
+  .header__auth {
+    margin-right: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
