@@ -26,6 +26,10 @@ $gradient-body-second: hsl(237, 23%, 32%)
 *
     margin: 0
     padding: 0
+.info__content__image__mobile
+    display: none
+.chars__image__mobile
+    display: none
 h1,h2,h3,h4 
     font-family: 'Overpass'
     font-weight: 600
@@ -291,7 +295,7 @@ body
     border-top-right-radius: 3rem
     background-color: $footer-background
     color: $footer-text
-    padding: 4rem 0
+    padding: 4rem 0 5rem 0
     &__content
         display: flex
         align-items: flex-start
@@ -457,10 +461,117 @@ body
             margin-left: 1rem
         &__auth
             margin-right: 1rem
-@media (max-width: 560px)
-    .header__main__dropdown
-
-
+@media (max-width: 570px)
+    .first-screen
+        padding-top: 10rem
+    .info
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 5rem 0 0 0
+        &__head
+            color: $headings
+            font-size: 2rem
+            padding-bottom: 0rem
+        &__content
+            text-align: center
+            padding-left: 3rem
+            padding-right: 3rem
+            margin-left: 0rem
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            justify-content: center
+            &__wrapper
+                top: 2rem
+            &__image
+                display: none
+            &__image__mobile
+                display: block
+            &__text
+                padding-bottom: 10rem
+                width: 100%
+                padding-top: 4rem
+                p
+                    width: 100%
+    .safety
+        padding-bottom: 0
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        min-width: 100%
+        background-position: -80px -280px, center
+        background-size: 40rem, cover
+        border-bottom-left-radius: 8rem
+        border-top-right-radius: 8rem
+        &__image
+            margin-bottom: 0rem
+            .safety__phones
+                max-width: 22rem
+                position: relative
+                top: -10rem
+                padding-left: 0rem
+        &__text
+            position: relative
+            top: -8rem
+            margin-left: 0
+            padding-left: 1rem
+            display: flex
+            justify-content: center
+            align-items: flex-start
+            flex-direction: column
+                padding-bottom: 1rem
+            p
+                text-align: center
+    .chars
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 8rem 0 0 0
+        &__content
+            width: 90%
+            padding-top: 3rem
+            h3
+                color: $headings
+                font-size: 1.8rem
+                padding-bottom: 1rem
+            p
+                width: 100%
+                line-height: 1.8rem
+                padding-bottom: 2rem
+                color: $opacity-text
+        &__wrapper
+            margin-right: 0rem
+            top: 0rem
+            left: 0rem
+            position: relative
+        &__image
+            display: none
+        &__image__mobile
+            display: block
+@media (max-width: 500px)
+    .footer
+        &__content
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+        &__logo
+            padding-bottom: 3rem
+        &__column
+            text-align: center
+            p
+                color: white
+                padding-bottom: 1.8rem
+            ul
+                list-style: none
+            li
+                padding-bottom: 0.6rem
         
 
 
