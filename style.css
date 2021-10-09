@@ -861,10 +861,10 @@ body {
     padding-bottom: 1rem;
   }
   .info__content__text p {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   .chars__content p {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   .chars__wrapper img {
     max-width: 24rem;
@@ -922,7 +922,6 @@ body {
   .chars__content p {
     padding-left: 2rem;
     padding-right: 2rem;
-    font-size: 0.75rem;
   }
 }
 
